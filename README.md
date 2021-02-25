@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+    <img alt="Logo" title="Move.it - Be more productive and take care of your health." width="100%" style="max-width:700px;" src=".github/cover.png">
+    <br><br>
+    <h1 style="border:0;font-weight:bold;text-transform:uppercase;margin:0">Move.it</h1>
+    <b>💪 Be more productive and take care of your health.</b>  
+    <br>
+    <a href="https://github.com/lenivene/moveit/blob/main/license.md">
+        <img src="https://img.shields.io/github/license/lenivene/moveit?color=%23342354&style=flat-square" alt="license - MIT">
+    </a>
+</div>
 
-## Getting Started
+# 📔 Index
 
-First, run the development server:
+- [📔 Index](#-index)
+- [📖 About](#-about)
+- [🚀 Technologies](#-technologies)
+- [📚 How to Use?](#-how-to-use)
+  - [1 - Clone repository](#1---clone-repository)
+  - [2 - Installing the packages](#2---installing-the-packages)
+  - [3 - Starting server](#3---starting-server)
+- [📝 License](#-license)
 
-```bash
-npm run dev
-# or
-yarn dev
+# 📖 About
+
+The _Move.it_ This a application for what be more productive and take care of your health.
+
+# 🚀 Technologies
+
+I developed using the following technologies
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Node.js](https://nodejs.org/en/)
+- [Next.js](https://nextjs.org/)
+- [VSCode](https://code.visualstudio.com/)
+
+# 📚 How to Use?
+
+- To use, you need some things
+  - Terminal
+  - Have the [Node.js](https://nodejs.org/en/download/) in a stable version
+  - You need a package manager. I recommend [Yarn](https://classic.yarnpkg.com/pt-BR/docs/install/), but you can use [NPM](https://www.npmjs.com/).
+
+## 1 - Clone repository
+
+Use this command
+
+```sh
+git clone git@github.com:lenivene/moveit.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2 - Installing the packages
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Open your terminal in folder: `moveit`, and use the line command:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```sh
+yarn install #or
+npm install
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 3 - Starting server
 
-## Learn More
+```sh
+yarn dev
+# or
+yarn build #and
+yarn start
+```
 
-To learn more about Next.js, take a look at the following resources:
+# 📝 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is under the MIT license.
