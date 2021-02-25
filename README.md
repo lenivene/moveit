@@ -4,8 +4,8 @@
     <h1 style="border:0;font-weight:bold;text-transform:uppercase;margin:0">Move.it</h1>
     <b>💪 Be more productive and take care of your health.</b>  
     <br>
-    <a href="https://github.com/lenivene/moveit/blob/main/license.md">
-        <img src="https://img.shields.io/github/license/lenivene/moveit?color=%23342354&style=flat-square" alt="license - MIT">
+    <a href="./LICENSE.md">
+        <img src="https://img.shields.io/github/license/lenivene/moveit?color=%235965E0&style=flat-square" alt="license - MIT">
     </a>
 </div>
 
