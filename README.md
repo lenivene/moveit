@@ -32,6 +32,7 @@ I developed using the following technologies
 - [Node.js](https://nodejs.org/en/)
 - [Next.js](https://nextjs.org/)
 - [VSCode](https://code.visualstudio.com/)
+- [Styled Components](https://styled-components.com/)
 
 # 📚 How to Use?
 
