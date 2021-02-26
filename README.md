@@ -18,6 +18,7 @@
   - [1 - Clone repository](#1---clone-repository)
   - [2 - Installing the packages](#2---installing-the-packages)
   - [3 - Starting server](#3---starting-server)
+- [Acknowledgment](#acknowledgment)
 - [📝 License](#-license)
 
 # 📖 About
@@ -66,6 +67,10 @@ yarn dev
 yarn build #and
 yarn start
 ```
+
+# Acknowledgment
+
+> Thanks [Diego](https://github.com/diego3g), for this event/lessons, #missionComplete and #challengeAccepted
 
 # 📝 License
 
