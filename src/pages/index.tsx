@@ -10,29 +10,53 @@ import { ChallengeBox } from "@/components/pages/home/ChallengeBox";
 
 // Contexts
 import { CountdownProvider } from "@/contexts/CountdownContext";
+import { GetServerSideProps } from "next";
+import { ChallengeProvider } from "@/contexts/ChallengesContext";
 
-function Home() {
+interface HomeProps {
+  level: number;
+  currentExperience: number;
+  challengesCompleted: number;
+}
+
+export default function Home({level, currentExperience, challengesCompleted}: HomeProps) {
   return (
-    <Container>
-      <Head>
-        <title>Início | Move.it</title>
-      </Head>
-      <ExperienceBar />
+    <ChallengeProvider
+    level={level}
+    currentExperience={currentExperience}
+    challengesCompleted={challengesCompleted}
+    >
+      <Container>
+        <Head>
+          <title>Início | Move.it</title>
+        </Head>
+        <ExperienceBar />
 
-      <CountdownProvider>
-        <PainelContainer>
-          <div>
-            <Profile />
-            <CompletedChallenges />
-            <Countdown />
-          </div>
-          <div>
-            <ChallengeBox />
-          </div>
-        </PainelContainer>
-      </CountdownProvider>
-    </Container>
+        <CountdownProvider>
+          <PainelContainer>
+            <div>
+              <Profile />
+              <CompletedChallenges />
+              <Countdown />
+            </div>
+            <div>
+              <ChallengeBox />
+            </div>
+          </PainelContainer>
+        </CountdownProvider>
+      </Container>
+    </ChallengeProvider>
   );
 }
 
-export default Home;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
+
+  return {
+    props: {
+      level: Number(level),
+      currentExperience: Number(currentExperience),
+      challengesCompleted: Number(challengesCompleted)
+    }
+  }
+}
