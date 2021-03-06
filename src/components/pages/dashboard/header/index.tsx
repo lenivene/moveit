@@ -39,15 +39,13 @@ export const Header = () => {
       </LogoContainer>
       <Menu>
         <ul>
-          {links.map(link => {
-            return (
-              <li className={link.href === router.pathname ? 'active' : ''}>
-                <Link href={link.href}>
-                  <a>{link.children}</a>
-                </Link>
-              </li>
-            )
-          })}
+          {links.map((link) => (
+            <li key={router.pathname} className={link.href === router.pathname ? 'active' : ''}>
+              <Link href={link.href}>
+                <a>{link.children}</a>
+              </Link>
+            </li>
+            ))}
         </ul>
       </Menu>
     </Container>
