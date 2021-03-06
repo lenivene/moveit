@@ -93,6 +93,7 @@ export const Form = styled.form`
     ${darken(0.03, GlobalColors.blue)} 0%,
     ${rgba(GlobalColors.blue, .8)} 100%
   );
+  border: 1px solid transparent;
   border-radius: 5px 0px 0px 5px;
 
   display: flex;
@@ -101,9 +102,14 @@ export const Form = styled.form`
   width: 100%;
   height: 80px;
 
+  :focus-within input,
+  :hover input {
+    border: 1px solid var(--blue-dark);
+  }
+
   input{
     background: none;
-    border: 0;
+    border: 1px solid transparent;
     outline: none;
 
     padding: 1.4375rem 1.875rem;
