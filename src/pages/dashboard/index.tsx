@@ -1,8 +1,8 @@
 import Head from "next/head";
 
 // Components
-import { MainContainer } from "@/styles/pages/dashboard/styles";
-import { Container, PainelContainer } from "@/styles/pages/dashboard/home/styles";
+import { MainContainer, Container } from "@/styles/pages/dashboard/styles";
+import { PainelContainer } from "@/styles/pages/dashboard/home/styles";
 import { ExperienceBar } from "@/components/pages/home/ExperienceBar";
 import { Profile } from "@/components/pages/home/Profile";
 import { CompletedChallenges } from "@/components/pages/home/CompletedChallenges";
