@@ -3,7 +3,7 @@ import Head from "next/head";
 // Components
 import { Header } from "@/components/pages/dashboard/header";
 import { MainContainer, HeaderContainer } from "@/styles/pages/dashboard/styles";
-import { ListGrid, Container } from "./styles";
+import { ListGrid, Container } from "@/styles/pages/dashboard/leaderboard/styles";
 
 function Home() {
   const leaders = Array(5).fill("");
