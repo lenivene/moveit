@@ -98,6 +98,9 @@ export const ListGrid = styled.div`
       margin-right: 4px;
 
       font-size: 1.5rem;
+
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
     }
   }
 `;
