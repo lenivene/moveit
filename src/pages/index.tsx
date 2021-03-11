@@ -1,37 +1,57 @@
+import { FormEvent } from 'react';
+import { useRouter } from 'next/router';
+
 import Head from "next/head";
+import Link from "next/link";
 
 // Components
-import { Container, PainelContainer } from "@/styles/pages/home/styles";
-import { ExperienceBar } from "@/components/pages/home/ExperienceBar";
-import { Profile } from "@/components/pages/home/Profile";
-import { CompletedChallenges } from "@/components/pages/home/CompletedChallenges";
-import { Countdown } from "@/components/pages/home/Countdown";
-import { ChallengeBox } from "@/components/pages/home/ChallengeBox";
+import { HomeGlobal, Main, Container, LoginContainer, Details, Form } from "@/styles/pages/home/styles";
 
-// Contexts
-import { CountdownProvider } from "@/contexts/CountdownContext";
+// Assets
+import ArrowRight from "./_assets/home/arrow-right.svg";
 
 function Home() {
+  const router = useRouter();
+
+  const handleLogin = (e: FormEvent) => {
+    e.preventDefault();
+
+    router.push('/dashboard')
+  }
+
   return (
-    <Container>
+    <Main>
       <Head>
         <title>Início | Move.it</title>
       </Head>
-      <ExperienceBar />
-
-      <CountdownProvider>
-        <PainelContainer>
-          <div>
-            <Profile />
-            <CompletedChallenges />
-            <Countdown />
-          </div>
-          <div>
-            <ChallengeBox />
-          </div>
-        </PainelContainer>
-      </CountdownProvider>
-    </Container>
+      <HomeGlobal />
+      <Container>
+        <LoginContainer>
+          <header>
+            <Link href="/">
+              <a>
+                <img src="/assets/logo.svg" />
+              </a>
+            </Link>
+          </header>
+          <Details>
+            <div className="description">
+              <h2>Bem-vindo</h2>
+              <div className="info">
+                <img src="/icons/github.svg" />
+                <p>Faça login com seu Github para começar</p>
+              </div>
+            </div>
+          </Details>
+          <Form onSubmit={handleLogin}>
+            <input name="username" placeholder="Digite seu username" />
+            <button type="submit">
+              <ArrowRight />
+            </button>
+          </Form>
+        </LoginContainer>
+      </Container>
+    </Main>
   );
 }
 

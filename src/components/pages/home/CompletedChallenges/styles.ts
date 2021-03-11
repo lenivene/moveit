@@ -14,11 +14,11 @@ export const Container = styled.div`
   font-weight: 500;
 
   span{
-    &:first-child{
+    &::first-child{
       font-size: 1.25rem;
     }
 
-    &:last-child{
+    &::last-child{
       font-size: 1.5rem;
     }
   }
